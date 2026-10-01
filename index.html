@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flicka Austria | Business Marketing Portfolio</title>
+<meta name="description" content="Portfolio of Flicka Austria, Business Marketing student at Rutgers Business School.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF; --cream:#FFF7E4; --butter:#FFD95A; --orange:#F4731C; --orange-text:#B84A06;
+  --ink:#2E2218; --muted:#6B5B4B; --line:#EADFC8;
+  --display:'Bricolage Grotesque','Trebuchet MS',Arial,sans-serif;
+  --body:'DM Sans','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.05rem}
+a{color:var(--orange-text)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:var(--display);font-weight:800;color:var(--ink);text-decoration:none;font-size:1.15rem}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;margin-left:24px}
+nav a:hover{color:var(--orange-text);text-decoration:underline;text-underline-offset:5px}
+
+.hero{background:var(--cream);padding:88px 0 80px;border-bottom:6px solid var(--butter)}
+.hero .who{color:var(--muted);font-weight:500;margin-bottom:14px}
+.hero h1{font-size:clamp(3rem,9vw,5.6rem);font-weight:800;margin-bottom:28px}
+.statement{font-family:var(--display);font-weight:500;font-size:clamp(1.4rem,3.4vw,2.05rem);line-height:1.4;max-width:760px;letter-spacing:-.01em}
+.statement span{background:linear-gradient(transparent 58%,var(--butter) 58%);padding:0 2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--orange);color:var(--ink)}
+.btn.main:hover{background:var(--butter)}
+.btn.alt{background:var(--white);color:var(--ink)}
+.btn.alt:hover{background:var(--butter)}
+
+section{padding:80px 0}
+.head{margin-bottom:36px}
+.head h2{font-size:clamp(2rem,5vw,2.8rem);margin-bottom:8px}
+.head p{color:var(--muted);max-width:560px}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.group{background:var(--cream);border-radius:18px;padding:26px;border-top:5px solid var(--orange)}
+.group:nth-child(even){border-top-color:var(--butter)}
+.group h3{font-size:1.3rem;margin-bottom:4px}
+.group p{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+.group ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.group li{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.95rem;font-weight:500}
+
+.projects{background:var(--cream)}
+.project{background:var(--white);border-radius:22px;padding:34px;margin-bottom:28px;border:1px solid var(--line)}
+.project:last-child{margin-bottom:0}
+.project.has-img{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:40px;align-items:start}
+.project img{width:100%;height:auto;border-radius:14px;display:block;border:1px solid var(--line)}
+.project h3{font-size:1.9rem;margin-bottom:6px}
+.meta{color:var(--muted);font-size:.95rem;margin-bottom:16px}
+.project p{margin-bottom:14px;max-width:62ch}
+.project h4{font-family:var(--display);font-size:1.05rem;margin:18px 0 8px}
+.project ul{padding-left:22px;max-width:62ch}
+.project li{margin-bottom:6px}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.links .btn{padding:10px 20px;font-size:.98rem}
+
+
+.jobs{list-style:none;border-left:3px solid var(--butter);margin-left:6px}
+.job{position:relative;padding:0 0 38px 32px;display:grid;grid-template-columns:190px 1fr;gap:8px 32px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-10px;top:8px;width:17px;height:17px;border-radius:50%;background:var(--orange);border:3px solid var(--white)}
+.job .when{color:var(--muted);font-weight:500;font-size:.97rem;padding-top:3px}
+.job h3{font-size:1.4rem;margin-bottom:2px}
+.job .where{color:var(--orange-text);font-weight:700;margin-bottom:10px}
+.job ul{padding-left:20px;max-width:64ch}
+.job li{margin-bottom:6px}
+.contact{background:var(--cream);border-top:6px solid var(--butter)}
+.contact{text-align:left}
+.contact .row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+footer{background:var(--ink);color:#F5EAD3;padding:26px 0;font-size:.92rem}
+
+@media (max-width:760px){
+  .project.has-img{grid-template-columns:1fr;gap:24px}
+  .project img{max-width:360px}
+  .project{padding:24px}
+  .job{grid-template-columns:1fr}
+  .hero{padding:60px 0 56px}
+  section{padding:60px 0}
+  nav a{margin-left:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Flicka Austria</a>
+    <nav aria-label="Main">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="who">Business Marketing, Rutgers Business School, Class of 2029</p>
+      <h1>Flicka Austria</h1>
+      <p class="statement"><span>I am a Marketing student at Rutgers Business School who turns ideas into fashion, media, and experiential campaigns that make people feel connected to a brand.</span></p>
+      <div class="cta">
+        <a class="btn main" href="#projects">See my projects</a>
+        <a class="btn alt" href="mailto:flickabicoa@gmail.com">Email me</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="head">
+        <h2>Skills</h2>
+        <p>The tools and strengths I bring to a marketing team.</p>
+      </div>
+      <div class="skills">
+        <div class="group">
+          <h3>Software and tools</h3>
+          <p>What I use to create, analyze, and present.</p>
+          <ul>
+            <li>Excel</li>
+            <li>Adobe</li>
+            <li>Canva</li>
+            <li>PowerPoint</li>
+            <li>Google Workspace (Docs, Sheets, Slides)</li>
+            <li>Photo and Video Editing</li>
+            <li>POS Systems</li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Creative and content</h3>
+          <p>How I turn ideas into content people notice.</p>
+          <ul>
+            <li>Graphic Design</li>
+            <li>Content Creation</li>
+            <li>Instagram and TikTok Content Creation</li>
+            <li>Social Media Content Strategy</li>
+            <li>Campaign Ideation</li>
+            <li>Trend Research</li>
+            <li>Creative Strategy</li>
+            <li>Visual Merchandising</li>
+            <li>Merchandising</li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Marketing and analytics</h3>
+          <p>How I approach brand and customer questions.</p>
+          <ul>
+            <li>Digital Marketing</li>
+            <li>Customer Research</li>
+            <li>User Research</li>
+            <li>Data Analysis</li>
+            <li>Performance Analysis</li>
+            <li>Hypothesis Testing</li>
+            <li>Design Thinking</li>
+            <li>CRM</li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Retail and customer care</h3>
+          <p>Skills built on the sales floor.</p>
+          <ul>
+            <li>Customer Service</li>
+            <li>Sales and Product Recommendations</li>
+            <li>Cash Handling</li>
+          </ul>
+        </div>
+        <div class="group">
+          <h3>Working with people</h3>
+          <p>How I work with teams and clients.</p>
+          <ul>
+            <li>Client Communication</li>
+            <li>Stakeholder Management</li>
+            <li>Adaptability</li>
+            <li>Leadership and Teamwork</li>
+            <li>Time Management</li>
+            <li>Bilingual: English and Tagalog</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="wrap">
+      <div class="head">
+        <h2>Projects</h2>
+        <p>Two projects that show how I mix creative ideas with analysis.</p>
+      </div>
+
+      <article class="project has-img">
+        <a href="Re-Styled_Mock_Post.png" aria-label="Open the Re-Styled mock post at full size">
+          <img src="Re-Styled_Mock_Post.png" alt="Re-Styled with FORM mock Instagram post showing a thrifted striped shirt next to the same shirt tied into a skirt, with the text 'New Series Dropping Soon'." loading="lazy">
+        </a>
+        <div>
+          <h3>Re-Styled with FORM</h3>
+          <p class="meta">Social media content pitch for Rutgers FORM, 2026</p>
+          <p>I noticed that videos about restyling thrifted clothes keep spreading on social media. I pitched a member-powered content series to FORM, a Rutgers fashion business club, and designed a mock post to show how it would look in their feed.</p>
+          <h4>What I proposed</h4>
+          <ul>
+            <li>Members submit short clips restyling a thrifted or existing piece into a new outfit, as a weekly or daily feature.</li>
+            <li>Styling challenges, like "restyle this for under $15," with members voting through Instagram polls.</li>
+            <li>A future partnership with a local thrift store for shoutouts or prizes.</li>
+          </ul>
+          <p style="margin-top:14px">The idea is low-cost, ties into the sustainable retail conversation, and gives the club steady content that comes from members instead of only the e-board.</p>
+          <div class="links">
+            <a class="btn main" href="Re-Styled_Mock_Post.png">View the mock post</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <h3>Forage Merchandising Job Simulation</h3>
+        <p class="meta">Completed September 2026, with a written reflection for class</p>
+        <p>In this simulation I stepped into the role of a merchandising analyst preparing a seasonal product launch. I completed four tasks that connect data, design, and strategy.</p>
+        <h4>What I did</h4>
+        <ul>
+          <li>Built an on-order log with Excel pivot tables. Breaking orders down by channel showed that European customers buy more online, while Canadian shoppers prefer stores.</li>
+          <li>Designed a line sheet for Canadian store teams that presents styles, colors, pricing, and quantities clearly.</li>
+          <li>Calculated full-price sell-through to spot which products were beating targets and which needed action, like a new placement or a promotion.</li>
+          <li>Compared the strategies of Alo Yoga and Athleta in a competitor analysis.</li>
+        </ul>
+        <div class="links">
+          <a class="btn main" href="Forage_Merchandising_Reflection.pdf">Read my reflection (PDF)</a>
+          <a class="btn alt" href="Forage_Certificate.pdf">View certificate (PDF)</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="head">
+        <h2>Experience</h2>
+        <p>Customer-facing and fast-paced roles that built my service, teamwork, and attention to detail.</p>
+      </div>
+      <ol class="jobs">
+        <li class="job">
+          <div class="when">July 2026 to present</div>
+          <div>
+            <h3>Sales Associate</h3>
+            <p class="where">Urban Outfitters, Edison, NJ</p>
+            <ul>
+              <li>Drive sales by offering styling advice and product recommendations tailored to customer preferences and current trends.</li>
+              <li>Process POS transactions and handle cash and card payments accurately while keeping checkout fast.</li>
+              <li>Build repeat customer relationships through attentive service, supporting loyalty program enrollment and sales goals.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when">April 2025 to February 2026</div>
+          <div>
+            <h3>Barista</h3>
+            <p class="where">HEYTEA, Edison, NJ</p>
+            <ul>
+              <li>Prepared and served 100+ beverages per shift while maintaining brand quality and consistency.</li>
+              <li>Managed cash handling and POS transactions with high accuracy.</li>
+              <li>Reduced customer wait times by prioritizing orders during peak hours.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when">June 2024 to April 2025</div>
+          <div>
+            <h3>Brand Representative</h3>
+            <p class="where">Hollister Co., Bridgewater, NJ</p>
+            <ul>
+              <li>Multitasked across customer service, merchandising, and operations, assisting 30 to 60 customers per shift.</li>
+              <li>Supported fitting rooms, checkout flow, and floor recovery in a high-volume store.</li>
+              <li>Restocked and organized inventory for 100+ SKUs, improving product accessibility and reducing stock discrepancies.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="job">
+          <div class="when">August 2022 to August 2025</div>
+          <div>
+            <h3>Basketball Scorekeeper and Clock Keeper</h3>
+            <p class="where">Kalahi, Piscataway, NJ</p>
+            <ul>
+              <li>Operated official scoring systems and game clocks during live competitive events with 100% accuracy.</li>
+              <li>Recorded scores, fouls, and timekeeping with zero post-game corrections across multiple seasons.</li>
+              <li>Coordinated with 10+ referees and staff per game to keep operations on time, in front of 100+ spectators.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="head">
+        <h2>Let's connect</h2>
+        <p>I'm looking for marketing opportunities where I can keep learning and contribute creative ideas.</p>
+      </div>
+      <div class="row">
+        <a class="btn main" href="mailto:flickabicoa@gmail.com">flickabicoa@gmail.com</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/flickaustria" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Flicka Austria. Built with GitHub Pages.</div>
+</footer>
+
+</body>
+</html>
